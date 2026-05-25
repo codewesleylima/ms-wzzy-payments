@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1556742208-999815fca738?w=400" alt="Payments - WZZY">
+  <img src="https://iili.io/3FFO5cF.png" alt="Universidade Católica de Brasília">
 </p>
 
 ## PERSONAL PROJECT - MS-PAYMENTS 💳
@@ -103,7 +103,7 @@ To run the project locally:
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/wesslima/" title="Wesley Lima">
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEVAsL2UL6A0w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721323972268?e=1746662400&v=beta&t=4_2RDPgz5FqJ2G-yRQk3y0vWMVRpSeAPKMAO7IOFXeE" width="100px;" alt="Wesley Lima Photo"/><br>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQH8pgDMsT7zMw/profile-displayphoto-crop_800_800/B4DZs03OodH8AM-/0/1766118457145?e=1781136000&v=beta&t=-N2WNA9CWJ7Io6nX33GPNvYtFl9ZQMAM-jALLlYNGc8" width="100px;" alt="Wesley Lima Photo"/><br>
         <sub>
           <b>Wesley Lima</b>
         </sub>
