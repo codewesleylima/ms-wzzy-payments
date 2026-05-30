@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: wzzy-mysql-payments
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+      start_period: 40s
+    networks:
+      - payments-network
+
+  ms-payments:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wzzy-ms-payments
+    restart: unless-stopped
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/WZZY_LIBRARY_PAYMENTS
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "8005:8005"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - payments-network
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  payments-network:
+    driver: bridge
