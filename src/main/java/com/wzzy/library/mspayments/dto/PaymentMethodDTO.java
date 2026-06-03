@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PaymentMethodDTO {
 
-    private Long id;
-    private Long customerId;
-    private String cardLastFourDigits;
-    private String cardType;
-    private Integer expiryMonth;
-    private Integer expiryYear;
-    private Boolean isDefault;
+    private Long paymentMethodIdDTO;
+    private Long customerIdDTO;
+    private String cardLastFourDigitsDTO;
+    private String cardTypeDTO;
+    private Integer expiryMonthDTO;
+    private Integer expiryYearDTO;
+    private Boolean isDefaultDTO;
 }

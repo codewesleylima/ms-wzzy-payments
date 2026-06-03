@@ -11,12 +11,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PaymentDTO {
 
-    private Long id;
-    private Long orderId;
-    private Long customerId;
-    private BigDecimal amount;
-    private String currency;
-    private String status;
-    private LocalDateTime paymentDate;
-    private String transactionId;
+    private Long paymentIdDTO;
+    private Long orderIdDTO;
+    private Long customerIdDTO;
+    private BigDecimal amountDTO;
+    private String currencyDTO;
+    private String statusDTO;
+    private LocalDateTime paymentDateDTO;
+    private String transactionIdDTO;
 }

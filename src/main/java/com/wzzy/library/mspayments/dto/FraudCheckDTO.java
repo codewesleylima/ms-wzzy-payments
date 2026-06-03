@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class FraudCheckDTO {
 
-    private Long id;
-    private Long paymentId;
-    private Integer fraudScore;
-    private String fraudLevel;
-    private String riskFactors;
-    private LocalDateTime checkDate;
+    private Long fraudCheckResultIdDTO;
+    private Long paymentIdDTO;
+    private Integer fraudScoreDTO;
+    private String fraudLevelDTO;
+    private String riskFactorsDTO;
+    private LocalDateTime checkDateDTO;
 }

@@ -15,7 +15,7 @@ public class WebhookEvent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long webhookEventId;
 
     @Column(nullable = false)
     private Long paymentId;

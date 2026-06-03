@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class WebhookEventDTO {
 
-    private Long id;
-    private Long paymentId;
-    private String eventType;
-    private String payload;
-    private LocalDateTime receivedDate;
-    private Boolean processed;
+    private Long webhookEventIdDTO;
+    private Long paymentIdDTO;
+    private String eventTypeDTO;
+    private String payloadDTO;
+    private LocalDateTime receivedDateDTO;
+    private Boolean processedDTO;
 }

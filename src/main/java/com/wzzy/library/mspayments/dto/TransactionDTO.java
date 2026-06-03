@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class TransactionDTO {
 
-    private Long id;
-    private Long paymentId;
-    private String status;
-    private String gatewayResponse;
-    private LocalDateTime timestamp;
+    private Long transactionIdDTO;
+    private Long paymentIdDTO;
+    private String statusDTO;
+    private String gatewayResponseDTO;
+    private LocalDateTime timestampDTO;
 }

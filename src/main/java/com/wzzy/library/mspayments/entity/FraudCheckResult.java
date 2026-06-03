@@ -15,7 +15,7 @@ public class FraudCheckResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long fraudCheckResultId;
 
     @OneToOne
     @JoinColumn(name = "payment_id", nullable = false)
