@@ -15,23 +15,23 @@ public class WebhookEvent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long webhookEventId;
+    private Long webhookEventIdEntity;
 
     @Column(nullable = false)
-    private Long paymentId;
+    private Long paymentIdEntity;
 
     @Column(nullable = false)
-    private String eventType;
+    private String eventTypeEntity;
 
     @Column(length = 5000)
-    private String payload;
+    private String payloadEntity;
 
     @Column(nullable = false)
-    private LocalDateTime receivedDate = LocalDateTime.now();
+    private LocalDateTime receivedDateEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private Boolean processed = false;
+    private Boolean processedEntity = false;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 }

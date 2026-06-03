@@ -15,24 +15,24 @@ public class FraudCheckResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long fraudCheckResultId;
+    private Long fraudCheckResultIdEntity;
 
     @OneToOne
     @JoinColumn(name = "payment_id", nullable = false)
-    private Payment payment;
+    private Payment paymentEntity;
 
     @Column(nullable = false)
-    private Integer fraudScore;
+    private Integer fraudScoreEntity;
 
     @Column(nullable = false)
-    private String fraudLevel;
+    private String fraudLevelEntity;
 
     @Column(length = 2000)
-    private String riskFactors;
+    private String riskFactorsEntity;
 
     @Column(nullable = false)
-    private LocalDateTime checkDate = LocalDateTime.now();
+    private LocalDateTime checkDateEntity = LocalDateTime.now();
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 }

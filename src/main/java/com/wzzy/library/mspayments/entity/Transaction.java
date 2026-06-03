@@ -15,21 +15,21 @@ public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long transactionId;
+    private Long transactionIdEntity;
 
     @ManyToOne
     @JoinColumn(name = "payment_id", nullable = false)
-    private Payment payment;
+    private Payment paymentEntity;
 
     @Column(nullable = false)
-    private String status;
+    private String statusEntity;
 
     @Column(length = 2000)
-    private String gatewayResponse;
+    private String gatewayResponseEntity;
 
     @Column(nullable = false)
-    private LocalDateTime timestamp = LocalDateTime.now();
+    private LocalDateTime timestampEntity = LocalDateTime.now();
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 }

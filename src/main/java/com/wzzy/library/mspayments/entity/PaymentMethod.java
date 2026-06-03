@@ -15,29 +15,29 @@ public class PaymentMethod {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long paymentMethodId;
+    private Long paymentMethodIdEntity;
 
     @Column(nullable = false)
-    private Long customerId;
+    private Long customerIdEntity;
 
     @Column(nullable = false)
-    private String cardLastFourDigits;
+    private String cardLastFourDigitsEntity;
 
     @Column(nullable = false)
-    private String cardType;
+    private String cardTypeEntity;
 
     @Column(nullable = false)
-    private Integer expiryMonth;
+    private Integer expiryMonthEntity;
 
     @Column(nullable = false)
-    private Integer expiryYear;
+    private Integer expiryYearEntity;
 
     @Column(nullable = false)
-    private Boolean isDefault = false;
+    private Boolean isDefaultEntity = false;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }

@@ -16,40 +16,40 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long paymentId;
+    private Long paymentIdEntity;
 
     @Column(nullable = false)
-    private Long orderId;
+    private Long orderIdEntity;
 
     @Column(nullable = false)
-    private Long customerId;
+    private Long customerIdEntity;
 
     @Column(nullable = false)
-    private BigDecimal amount;
+    private BigDecimal amountEntity;
 
     @Column(nullable = false)
-    private String currency = "USD";
+    private String currencyEntity = "USD";
 
     @Column(nullable = false)
-    private String status = "PENDING";
+    private String statusEntity = "PENDING";
 
-    private LocalDateTime paymentDate;
+    private LocalDateTime paymentDateEntity;
 
-    private String transactionId;
+    private String transactionIdEntity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "payment")
-    private java.util.List<Transaction> transactions;
+    private java.util.List<Transaction> transactionsEntity;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "payment")
-    private FraudCheckResult fraudCheckResult;
+    private FraudCheckResult fraudCheckResultEntity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "payment_id")
-    private java.util.List<WebhookEvent> webhookEvents;
+    private java.util.List<WebhookEvent> webhookEventsEntity;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }
