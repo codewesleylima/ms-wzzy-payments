@@ -19,4 +19,9 @@ public class PaymentDTO {
     private String statusDTO;
     private LocalDateTime paymentDateDTO;
     private String transactionIdDTO;
+    private java.util.List<TransactionDTO> transactionsDTO;
+    private FraudCheckDTO fraudCheckResultDTO;
+    private java.util.List<WebhookEventDTO> webhookEventsDTO;
+    private LocalDateTime createdAtDTO;
+    private LocalDateTime updatedAtDTO;
 }
